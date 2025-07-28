@@ -29,3 +29,7 @@ def chat():
     result = response.json()
 
     return jsonify({"response": result['choices'][0]['message']['content']})
+
+# 👇 ESTA PARTE ES CRUCIAL PARA RENDER 👇
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
